@@ -18,3 +18,26 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@layer utilities {
+  .home {
+    @apply no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll;
+  }
+  .home-content {
+    @apply no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
+  }
+  .container {
+    @apply max-w-[1040px] mx-auto;
+  }
+  .navLink {
+    @apply h-full flex flex-col justify-center transition-all;
+  }
+
+  .navActive {
+    @apply border-b-[#000]  border-b-[2px];
+  }
+
+  .navDefault {
+    @apply border-b-transparent  border-b-[2px];
+  }
+}

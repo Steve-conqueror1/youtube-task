@@ -20,15 +20,17 @@ const config = {
     extend: {
       colors: {
         gray: {
+          200: "#f1f1f1",
+          500: "#272727",
           600: "#171719",
-          300: "#272727",
         },
         yellow: {
           500: "#FFD600",
         },
-        black: {
-          300: "#272727",
-        },
+      },
+      fontFamily: {
+        montserrat: "var(--font-montserrat)",
+        roboto: "var(--font-ibm-plex-serif)",
       },
       borderRadius: {
         lg: "var(--radius)",
