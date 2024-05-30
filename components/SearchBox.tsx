@@ -12,12 +12,12 @@ const SearchBox = () => {
   };
 
   return (
-    <div className="flex gap-6 flex-col w-full">
-      <h6 className="text-black font-normal leading-[53px] text-center text-[36px] font-montserrat">
+    <div className="flex gap-4 flex-col w-full">
+      <h6 className={`text-black font-normal   font-montserrat ${!videos? "text-center text-4xl leading-[53px]" : "text-[28px]"}`}>
         Поиск видео
       </h6>
-      <div className="flex flex-col gap-8 w-full">
-        <Search handleSetVideos={handleSetVideos} />
+      <div className="flex flex-col gap-6 w-full">
+        <Search handleSetVideos={handleSetVideos} videosAvailable={Boolean(videos)} />
         {videos && <VideoList videos={videos} />}
       </div>
     </div>
