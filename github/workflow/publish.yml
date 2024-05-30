@@ -23,6 +23,9 @@ jobs:
         uses: s0/git-publish-subdir-action@develop
 
         env:
+          YOUTUBE_API: ${{ secrets.YOUTUBE_API }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          NEXT_PUBLIC_YOUTUBE_VIDEO_LINK: ${{ secrets.NEXT_PUBLIC_YOUTUBE_VIDEO_LINK }}
           REPO: self
           BRANCH: build
           FOLDER: out
