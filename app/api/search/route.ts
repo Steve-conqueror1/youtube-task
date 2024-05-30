@@ -1,5 +1,5 @@
 import axios from "axios";
-import {errorLogger} from "@/lib/utils";
+import {errorLogger} from "@/logger";
 
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 
