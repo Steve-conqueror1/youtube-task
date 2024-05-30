@@ -25,7 +25,8 @@ export async function GET(req: Request) {
 
   } catch (error) {
     console.error("Error searching YouTube videos:", error);
-    return Response.json({ type: "error", message: "Error searching YouTube videos" }, {status: 500});
+
+    return Response.json({ type: "error", message: (error as any).message, url: REQUEST_URL }, {status: 500});
   }
 }
 

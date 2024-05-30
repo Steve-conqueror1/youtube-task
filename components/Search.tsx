@@ -24,9 +24,9 @@ const Search: React.FC<Props> = (props) => {
   const handleSearch: SubmitHandler<FormProps> = async (data: FormProps) => {
     try {
       const res = await axios.get(`/api/search?query=${data.search}`);
+      console.log("-----res----", res)
       const responseData = res.data;
       handleSetVideos(responseData);
-      console.log("-----res----", res)
     } catch (error) {
       handleSetVideos(null);
       console.log("-----error----", error)
