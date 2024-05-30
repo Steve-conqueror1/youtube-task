@@ -25,7 +25,7 @@ const LoginForm = () => {
   return (
     <div
       className={
-        "w-full max-w-[510px] h-full max-h-[520px] flex flex-col items-center  bg-[rgba(39, 39, 39, 0.1)] rounded-[5px] border py-8"
+        "w-full max-w-[510px] h-full max-h-[520px] flex flex-col items-center  bg-[rgba(39, 39, 39, 0.1)] rounded-[5px] border py-8 bg-gray-300"
       }
     >
       <div className="w-full flex flex-col gap-4">
