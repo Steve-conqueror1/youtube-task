@@ -59,4 +59,8 @@
     @apply text-[20px] font-normal font-montserrat placeholder:opacity-[30%] placeholder:text-[20px] placeholder:font-roboto placeholder:text-gray-500 rounded-lg border border-gray-300 text-gray-900 rounded-l-[5px];
   }
 
+  .bg-img{
+    @apply bg-no-repeat bg-center bg-cover
+  }
+
 }

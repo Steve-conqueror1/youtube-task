@@ -10,8 +10,7 @@ const VideoItem: React.FC<Props> = (props) => {
   const { video } = props;
   return (
       <div className="h-[236px]  rounded-lg flex flex-col gap-2">
-          <div className="relative h-[138px] w-full">
-              <Image src={video.thumbnail} alt={"thumbnail"} fill/>
+          <div className="relative h-[138px] w-full bg-img" style={{backgroundImage: `url(${video.thumbnail})`}} >
               <button className={"absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
                       <path fill="#FF3D00"
