@@ -1,6 +1,4 @@
 name: Generate a build and push to another branch
-uses: actions/cache@v4
-
 on:
   push:
     branches:
