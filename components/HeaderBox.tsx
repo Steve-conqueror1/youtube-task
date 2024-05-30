@@ -3,10 +3,16 @@ import { navLinks } from "@/constants";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
+import {Button} from "@/components/ui/button";
 
 const HeaderBox = () => {
   const path = usePathname();
+  const router = useRouter();
+
+  const handleLogout = () => {
+     router.push("/sign-in")
+  }
 
   return (
     <header className="bg-white w-full h-[80px] flex flex-col justify-center border-b border-gray-200">
@@ -42,12 +48,12 @@ const HeaderBox = () => {
             </li>
           ))}
         </ul>
-        <Link
-          href={"#"}
+        <Button onClick={handleLogout}
+
           className="text-black font-bold text-center leading-[28px] text-[18px] font-montserrat"
         >
           Выйти
-        </Link>
+        </Button>
       </div>
     </header>
   );
