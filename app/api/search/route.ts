@@ -1,4 +1,5 @@
 import axios from "axios";
+import {errorLogger} from "@/lib/utils";
 
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 
@@ -25,8 +26,8 @@ export async function GET(req: Request) {
 
   } catch (error) {
     console.error("Error searching YouTube videos:", error);
-
-    return Response.json({ type: "error", message: (error as any).message, url: REQUEST_URL }, {status: 500});
+    errorLogger.error((error as any).message, {url: REQUEST_URL, })
+    return Response.json({ type: "error", message: (error as any).message, url: REQUEST_URL, query: query}, {status: 500});
   }
 }
 
