@@ -26,8 +26,10 @@ const Search: React.FC<Props> = (props) => {
       const res = await axios.get(`/api/search?query=${data.search}`);
       const responseData = res.data;
       handleSetVideos(responseData);
+      console.log("-----res----", res)
     } catch (error) {
       handleSetVideos(null);
+      console.log("-----error----", error)
     }
   };
 
