@@ -1,4 +1,5 @@
 name: Generate a build and push to another branch
+uses: actions/cache@v4
 
 on:
   push:
@@ -12,6 +13,16 @@ jobs:
     steps:
       - name: git-checkout
         uses: actions/checkout@v3
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
       - name: Install all dependencies
         run: npm install
