@@ -41,8 +41,13 @@
     @apply no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
   }
   .container {
-    @apply max-w-[1040px] mx-auto min-h-[calc(100vh-80px)];
+    @apply max-w-[1040px] mx-auto;
   }
+
+  .container-height{
+    @apply min-h-[calc(100vh-80px)];
+  }
+
   .navLink {
     @apply h-full flex flex-col justify-center transition-all;
   }
