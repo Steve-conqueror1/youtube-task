@@ -19,6 +19,20 @@
   scrollbar-width: none;
 }
 
+.clap{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clap-1{
+  -webkit-line-clamp: 1;
+}
+.clap-2{
+  -webkit-line-clamp: 2;
+}
+
+
 @layer utilities {
   .home {
     @apply no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll;
@@ -27,7 +41,7 @@
     @apply no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
   }
   .container {
-    @apply max-w-[1040px] mx-auto;
+    @apply max-w-[1040px] mx-auto min-h-[calc(100vh-80px)];
   }
   .navLink {
     @apply h-full flex flex-col justify-center transition-all;
@@ -40,4 +54,9 @@
   .navDefault {
     @apply border-b-transparent  border-b-[2px];
   }
+
+  .input-class {
+    @apply text-[20px] font-normal font-montserrat placeholder:opacity-[30%] placeholder:text-[20px] placeholder:font-roboto placeholder:text-gray-500 rounded-lg border border-gray-300 text-gray-900 rounded-l-[5px];
+  }
+
 }

@@ -21,7 +21,10 @@ const config = {
       colors: {
         gray: {
           200: "#f1f1f1",
+          300: "#fafafa",
+          400: "#e1e1e1",
           500: "#272727",
+          700: "#1717194D",
           600: "#171719",
         },
         yellow: {
@@ -30,7 +33,7 @@ const config = {
       },
       fontFamily: {
         montserrat: "var(--font-montserrat)",
-        roboto: "var(--font-ibm-plex-serif)",
+        roboto: "var(--font-roboto)",
       },
       borderRadius: {
         lg: "var(--radius)",
